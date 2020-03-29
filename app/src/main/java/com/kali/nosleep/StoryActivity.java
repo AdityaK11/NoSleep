@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 public class StoryActivity extends AppCompatActivity {
 
     String title, author, story;
@@ -13,6 +15,8 @@ public class StoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
         getSupportActionBar().hide();
+
+        FirebaseDatabase.getInstance();
 
         if (getIntent() != null){
             title = getIntent().getStringExtra("title");

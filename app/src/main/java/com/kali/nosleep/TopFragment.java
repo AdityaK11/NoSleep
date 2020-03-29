@@ -39,6 +39,7 @@ public class TopFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_top, container, false);
+        FirebaseDatabase.getInstance();
         rv = v.findViewById(R.id.rv_top);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity().getBaseContext());
         rv.setLayoutManager(layoutManager);
